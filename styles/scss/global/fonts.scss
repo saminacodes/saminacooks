@@ -1,0 +1,52 @@
+:root {
+  --body: 'Poppins', sans-serif;
+  --title: 'Share Tech', sans-serif;
+}
+
+h1,.h1,
+h2,.h2,
+h3,.h3,
+h4,.h4,
+h5,.h5,
+h6,.h6 {
+  font-family: var(--title);
+  color: var(--white);
+}
+
+button,
+p,
+a,
+li {
+  font-family: var(--body);
+}
+
+p,
+li {
+  color: var(--white);
+  font-size: clamp(1rem, 1vw, 1.5rem);
+}
+
+a,
+button {
+  color: var(--white);
+}
+
+.red-text {
+  color: var(--pastel-red);
+}
+
+.yellow-text {
+  color: var(--pastel-yellow);
+}
+
+.green-text {
+  color: var(--pastel-green);
+}
+
+.blue-text {
+  color: var(--pastel-blue);
+}
+
+.purple-text {
+  color: var(--pastel-purple);
+}

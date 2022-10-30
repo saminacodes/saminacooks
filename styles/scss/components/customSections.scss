@@ -1,0 +1,138 @@
+section.block.hero {
+  min-height: 640px;
+  padding-bottom: 10px;
+  margin-bottom: 3vmax;
+
+  @media screen and (max-width: 768px) {
+    margin-bottom: 7vmax;
+    padding-bottom: 40px;
+    min-height: unset;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 7vmax;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column-reverse;
+    }
+
+    &.reverse {
+      flex-direction: row-reverse;
+      @media screen and (max-width: 768px) {
+        flex-direction: column-reverse;
+      }
+    }
+  }
+
+  .content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    h2 {
+      line-height: 1;
+      margin-bottom: 2rem;
+      @media screen and (max-width: 768px) {
+        margin-bottom: 1rem;
+      }
+    }
+
+    a {
+      font-size: 1.25rem;
+      margin-top: 1.25em;
+    }
+  }
+
+  .image-container {
+    border: 2px solid white;
+    width: auto;
+    height: auto;
+    position: relative;
+    width: 50%;
+    height: 50%;
+    max-width: 480px;
+    max-height: 480px;
+    aspect-ratio: 1;
+
+    @media screen and (max-width: 768px) {
+      width: 75%;
+      height: 75%;
+    }
+
+    .bg-square {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      z-index: -1;
+    }
+
+    .bg-red {
+      background-color: var(--pastel-red);
+      top: 40px;
+      left: 40px;
+      transform: rotate(5deg);
+    }
+
+    .bg-yellow {
+      background-color: var(--pastel-yellow);
+      top: 80px;
+      right: 60px;
+      transform: rotate(10deg);
+    }
+
+    .bg-green {
+      background-color: var(--pastel-green);
+      top: 100px;
+      left: 150px;
+      transform: rotate(-5deg);
+    }
+
+    .bg-blue {
+      background-color: var(--pastel-blue);
+      top: 80px;
+      right: 80px;
+      transform: rotate(-10deg);
+    }
+
+    .bg-purple {
+      background-color: var(--pastel-purple);
+    }
+
+    @media screen and (max-width: 768px) {
+      .bg-red, .bg-yellow, .bg-green, .bg-blue {
+        top: 0px;
+      }
+    }
+  }
+
+  // "style" Props
+  &.main-hero {
+    margin-top: 120px;
+    h2 {
+      font-size: clamp(2.5rem, 10vw, 6rem);
+    }
+    p {
+      max-width: 38ch;
+      line-height: 1.5;
+      font-size: clamp(1.25rem, 10vw, 1.5rem);
+    }
+  }
+
+  // "style" Props
+  &.secondary-hero {
+    .content-container {
+      h2 {
+        font-size: clamp(1.5rem, 5vw, 3rem);
+      }
+      p {
+        max-width: 55ch;
+        line-height: 1.5;
+        font-size: clamp(1rem, 10vw, 1.25rem);
+      }
+    }
+  }
+}

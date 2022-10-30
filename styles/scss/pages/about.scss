@@ -1,0 +1,79 @@
+.about {
+  h2 {
+    font-size: clamp(2.5rem, 10vw, 6rem);
+
+    @media screen and (max-width: 768px) {
+      text-align: center;
+    }
+  }
+
+  .main-title,
+  .description {
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+  .about-text {
+    font-size: 1.5rem;
+    max-width: 55ch;
+  }
+
+  .about-section,
+  .technologies-section,
+  .faq-section {
+    margin-bottom: 180px;
+
+    @media screen and (max-width: 768px) {
+      margin-bottom: 150px;
+    }
+  }
+
+  .main-hero {
+    .red-text {
+      text-align: left;
+    }
+    @media screen and (max-width: 768px) {
+      .description {
+        max-width: unset !important;
+      }
+    }
+  }
+
+  .about-section {
+    .yellow-text {
+      text-align: left;
+    }
+    .content-container {
+      max-width: max-content;
+      margin-left: auto;
+    }
+  }
+
+  .technologies-section {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+
+    svg {
+      min-width: 44px;
+      min-height: 44px;
+      max-width: 120px;
+      max-height: 120px;
+      height: auto;
+      width: 7vw;
+    }
+    .tech-logos {
+      margin-top: 36px;
+      display: flex;
+      gap: 2.5vw;
+    }
+  }
+
+  .faq-section {
+    .faq-container {
+      margin-top: 2rem;
+    }
+  }
+}

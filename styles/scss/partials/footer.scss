@@ -1,0 +1,30 @@
+footer#footer {
+  width: 100%;
+  height: auto;
+
+  .contact-text {
+    font-size: clamp(3rem, 10vw, 4rem);
+    line-height: 1.15;
+    span {
+      color: var(--pastel-purple);
+    }
+  }
+
+  button {
+    margin-top: 2rem;
+  }  
+  .discord-button {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .copyright {
+    font-size: 0.5rem;
+  }
+
+  .footer-socials {
+    margin-top: 100px;
+  }
+
+}
